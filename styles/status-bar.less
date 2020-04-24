@@ -7,8 +7,31 @@
 // Overrides: atom/status-bar
 
 .status-bar {
-  font-size: @font-size;
-  color: @text-color;
-  border-top: 1px solid @base-border-color;
-  background-color: @tree-view-background-color;
+  font-size: 16px;
+  color: #000000;
+  border-top: 2px solid #e8ecf1;
+  background-color: #e8ecf1;
+
+  .icon:before {
+    font-size: 16px;
+    top: 0px;
+  }
+
+  a {
+    color: #000000;
+  }
+
+  a:hover {
+   color: #67a4ec;
+ }
+}
+
+.cursor-position{
+  .inline-block {
+    color: #000000;
+  }
+
+  .inline-block:hover {
+    color: #67a4ec;
+  }
 }

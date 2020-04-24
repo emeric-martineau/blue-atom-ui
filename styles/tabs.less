@@ -5,53 +5,64 @@
 // Displays selectable tabs above the editor.
 // Overrides: atom/tabs
 
+// Tab for open tab in file list
 .tab-bar {
-  background-color: @tab-bar-background-color;
-  border-bottom: 1px solid @base-border-color;
+  background-color: #000000;
 
   .tab {
-    color: @text-color;
-    height: @tab-height;
+    color: #8793ab;
+    height: 40px;
     line-height: @tab-height;
-    font-size: @font-size;
-    border-right: 1px solid @tab-border-color;
-    background-color: @tab-background-color;
+    font-size: 16px;
+    padding-top: 5px;
+    background-color: #2a303b;
     &.active {
       color: @text-color-selected;
-      background-color: @tab-background-color-active;
+      background-color: #67a4ec;
+      font-weight: bold;
     }
 
+    .close-icon {
+      margin-top: 4px;
+    }
 
     // Modified Icon (the circle) -------------------
     &.modified:not(:hover) .close-icon {
       top: 50%;
       right: @component-padding + 4px; // 4px -> half of icon size
       margin-top: -3px;
-      border-color: @text-color-info;
+      border-color: #000000;
     }
     &.modified:hover .close-icon {
-      color: currentColor;
+      color: #000000;
     }
-
 
     // Close Icon (the X) -------------------
     .close-icon:hover {
-      color: @text-color-selected;
+      color: #000000;
     }
     &.active .close-icon:hover {
-      color: @text-color;
+      color: #000000;
     }
-
 
     // Dragging -------------------
     // Styles get applied while dragging a tab
     &.is-dragging {
-      background: darken(@tab-background-color, 10%);
+      background: darken(#67a4ec, 50%);
       border-color: transparent;
       opacity: .5;
       & .close-icon {
         visibility: hidden;
       }
     }
+  }
+}
+
+// Tab for open tab in editor
+atom-workspace-axis>atom-pane-container>atom-pane>.tab-bar {
+  background-color: #e8ecf1;
+
+  .tab {
+    background-color: #e8ecf1;
   }
 }

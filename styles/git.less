@@ -4,9 +4,9 @@
 
 // Used to color git status
 
-.status          { color: @text-color; }
-.status-added    { color: @text-color-success; } // green
-.status-ignored  { color: @text-color-subtle; }  // faded
-.status-modified { color: @text-color-warning; } // orange
-.status-removed  { color: @text-color-error; }   // red
-.status-renamed  { color: @text-color-info; }    // blue
+.status>.icon::before          { color: #FFFFFF; }
+.status-added>.icon::before    { color: #00bd9c; } // green
+.status-ignored>.icon::before  { color: #AAAAAA; }  // faded
+.status-modified>.icon::before { color: #e87e04; } // yellow
+.status-removed>.icon::before  { color: #FF0000; }   // red
+.status-renamed>.icon::before  { color: #67a4ec; }    // blue

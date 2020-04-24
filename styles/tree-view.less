@@ -5,16 +5,43 @@
 // Used to explore and open files in the current project.
 // Overrides: atom/tree-view
 
+// Resize bar of file explorer
+.atom-dock-resize-handle.left.atom-dock-resize-handle-resizable {
+  background-color: #2a303b;
+  width: 4px;
+}
+
+// Button to resize file explorer for example
+.atom-dock-toggle-button-inner.left, .atom-dock-toggle-button-inner.right {
+  background-color: #2a303b;
+  color: #67a4ec;
+  border-color: #2a303b;
+}
 
 .tree-view-resizer {
   border-right: 1px solid @base-border-color;
 }
 
 .tree-view {
-  color: @text-color;
-  background-color: @tree-view-background-color;
+  color: #FFFFFF;
+  font-size: 16px;
+  background-color: #2a303b;
 
   .list-item.selected {
-    color: @text-color-selected;
+    font-weight: bold;
+  }
+
+  .list-item.selected::before {
+    background: #67a4ec;
+  }
+
+  // Clear all icon
+  .name.icon::before {
+    //content: '';
+  }
+
+  .list-item {
+    margin-top: 5px;
+    color: #FFFFFF;
   }
 }
