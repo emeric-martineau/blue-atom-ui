@@ -42,7 +42,7 @@
 
 @input-background-color: #FFFFFF;
 @input-text-color: #000000;
-@input-border-color:     red;
+@input-border-color:     @background-color-selected;
 
 @tool-panel-background-color: @base-background-color;
 @tool-panel-border-color:     @base-border-color;
@@ -77,6 +77,10 @@
 @tree-view-border-color:     @base-border-color;
 
 @status-bar-background-color: #e8ecf1;
+
+@github-recent-commit-background-color-hover: lighten(@background-color-selected, 10%);
+@github-recent-commit-focus-selected-background-color-hover: @background-color-selected;
+@github-recent-commit-focus-selected-text-color-hover: @text-color-selected;
 
 // Site colors
 @ui-site-color-1: hsl(208, 100%, 50%); // blue

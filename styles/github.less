@@ -1,0 +1,23 @@
+
+.github-Project-path.input-select {
+  color: @input-text-color;
+}
+
+.github-RecentCommit:hover {
+  background-color: @github-recent-commit-background-color-hover;
+}
+
+/*.github-RecentCommit:focus {
+  background-color: lighten(#67a4ec, 10%);
+}*/
+
+.github-RecentCommit.is-selected {
+  font-weight: bold;
+}
+
+.github-RecentCommits:focus .github-RecentCommit.is-selected {
+  background-color: @github-recent-commit-focus-selected-background-color-hover;
+  color: @github-recent-commit-focus-selected-text-color-hover;
+}
+
+// TODO date of commit (2h...) or too dark
