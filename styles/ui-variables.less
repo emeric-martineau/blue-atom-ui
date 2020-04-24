@@ -12,10 +12,10 @@
 
 
 // Text Colors
-@text-color:           hsl(0,0%,66%);
+@text-color:           #FFFFFF;
 @text-color-subtle:    hsl(0,0%,50%);
 @text-color-highlight: hsl(0,0%,94%);
-@text-color-selected:  hsl(0,0%,100%);
+@text-color-selected:  #FFFFFF;
 
 @text-color-info:    hsl(219,  79%, 66%);
 @text-color-success: hsl(140,  44%, 62%);
@@ -29,19 +29,20 @@
 @background-color-error:   hsl(0,    70%, 50%);
 
 @background-color-highlight: lighten(@base-background-color, 5%);
-@background-color-selected:  lighten(@base-background-color, 10%);
-@app-background-color:       darken(@base-background-color, 5%);
+@background-color-selected:  #67a4ec;
+@app-background-color:       #2a303b;
 
 // Base colors
-@base-background-color: hsl(222,6%,22%);
+@base-background-color: #2a303b;
 @base-border-color:     darken(@base-background-color, 8%);
 
 // Component colors
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color:     @base-border-color;
 
-@input-background-color: @app-background-color;
-@input-border-color:     @base-border-color;
+@input-background-color: #FFFFFF;
+@input-text-color: #000000;
+@input-border-color:     red;
 
 @tool-panel-background-color: @base-background-color;
 @tool-panel-border-color:     @base-border-color;
@@ -60,14 +61,17 @@
 @button-background-color-selected: @button-background-color-hover;
 @button-border-color:              @base-border-color;
 
-@tab-bar-background-color:    @base-background-color;
-@tab-bar-border-color:        @base-border-color;
+@tab-bar-background-color:    @app-background-color;
 @tab-background-color:        @tab-bar-background-color;
-@tab-background-color-active: lighten(@tab-bar-background-color, 10%);
-@tab-border-color:            @base-border-color;
+@tab-background-color-active: @background-color-selected;
+@tab-text-color-selected:              @text-color-selected;
+@tab-text-color:              #8793ab;
+@tab-bar-editor-background-color: @status-bar-background-color;
 
 @tree-view-background-color: @base-background-color;
 @tree-view-border-color:     @base-border-color;
+
+@status-bar-background-color: #e8ecf1;
 
 // Site colors
 @ui-site-color-1: hsl(208, 100%, 50%); // blue
@@ -77,8 +81,8 @@
 @ui-site-color-5: #EBDD5B;             // yellow
 
 // Sizes
-@font-size: 12px;
-@input-font-size: 14px;
+@font-size: 16px;
+@input-font-size: 14x;
 
 @disclosure-arrow-size: 12px;
 
@@ -87,7 +91,7 @@
 @component-icon-size: 16px;
 @component-line-height: 25px;
 
-@tab-height: 30px;
+@tab-height: 40px;
 
 // Misc
 @component-border-radius: 2px;

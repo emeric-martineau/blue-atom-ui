@@ -7,31 +7,31 @@
 // Overrides: atom/status-bar
 
 .status-bar {
-  font-size: 16px;
-  color: #000000;
-  border-top: 2px solid #e8ecf1;
-  background-color: #e8ecf1;
+  font-size: @font-size;
+  color: @app-background-color;
+  border-top: 2px solid @status-bar-background-color;
+  background-color: @status-bar-background-color;
 
   .icon:before {
-    font-size: 16px;
+    font-size: @font-size;
     top: 0px;
   }
 
   a {
-    color: #000000;
+    color: @app-background-color;
   }
 
   a:hover {
-   color: #67a4ec;
+   color: @background-color-selected;
  }
 }
 
 .cursor-position{
   .inline-block {
-    color: #000000;
+    color: @app-background-color;
   }
 
   .inline-block:hover {
-    color: #67a4ec;
+    color: @background-color-selected;
   }
 }
