@@ -83,6 +83,52 @@
     background-color: @config-panels-background-color;
     color: @config-panels-section-heading-text-color;
   }
+
+  .package-card {
+    background-color: @theme-color-blue-dark;
+    color: @theme-color-white;
+
+    &:hover {
+      background-color: @theme-color-blue-gray;
+      color: @theme-color-black;
+
+      .package-name {
+        color: @theme-color-black;
+      }
+    }
+
+    .stats .stats-item {
+      .icon {
+        color: @theme-color-blue;
+      }
+    }
+
+    .meta-user .author {
+      color: @theme-color-blue;
+    }
+
+    .btn {
+      color: @config-panels-package-card-button-text-color;
+      background-color: @config-panels-package-card-button-background-color;
+      &:hover,
+      &:focus {
+        color: @config-panels-package-card-button-text-color-focus;
+        background-color: @config-panels-package-card-button-background-color;
+      }
+      &:active {
+        color: @config-panels-package-card-button-text-color;
+        background-color: lighten(@config-panels-package-card-button-background-color, 10%);
+      }
+      &.selected {
+        color: @config-panels-package-card-button-text-color;
+        background-color: @config-panels-package-card-button-background-color;
+      }
+      &:focus,
+      &:focus:active {
+        outline: none;
+      }
+    }
+  }
 }
 
 .settings-view section .section-heading, .settings-view .section .section-heading {
