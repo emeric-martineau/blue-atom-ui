@@ -1,23 +1,90 @@
-.settings-view .config-menu {
-  background-color: @config-menu-background-color;
-  color: @config-menu-text-color;
-
-  a {
+.settings-view {
+  .config-menu {
+    background-color: @config-menu-background-color;
     color: @config-menu-text-color;
-  }
 
-  .panels-menu.nav.nav-pills.nav-stacked a:hover {
-    background-color: @config-menu-item-background-color;
-  }
-
-  .button-area {
-    button:hover {
-      background-color: @config-menu-button-area-button-background-color-hover;
-      color: @config-menu-button-area-button-text-color-hover;
+    a {
+      color: @config-menu-text-color;
     }
 
-    button {
-      border: 1px solid @config-menu-button-area-button-border-color;
+    .panels-menu.nav.nav-pills.nav-stacked a:hover {
+      background-color: @config-menu-item-background-color;
+    }
+
+    .button-area {
+      button:hover {
+        background-color: @config-menu-button-area-button-background-color-hover;
+        color: @config-menu-button-area-button-text-color-hover;
+      }
+
+      button {
+        border: 1px solid @config-menu-button-area-button-border-color;
+      }
     }
   }
+
+  .panels {
+    color: @config-panels-text-color;
+    background: @config-panels-background-color;
+
+    .text {
+      color: @config-panels-text-color;
+    }
+
+    .btn {
+      color: @config-panels-button-text-color;
+      background-color: @config-panels-button-background-color;
+      &:hover,
+      &:focus {
+        color: @config-panels-button-text-color-focus;
+        background-color: @config-panels-button-background-color;
+      }
+      &:active {
+        color: @button-text-color-active;
+        background-color: lighten(@config-panels-button-background-color, 10%);
+      }
+      &.selected {
+        color: @config-panels-button-text-color;
+        background-color: @config-panels-button-background-color;
+      }
+      &:focus,
+      &:focus:active {
+        outline: none;
+      }
+    }
+
+    atom-text-editor[mini] {
+      padding-left: @component-padding/2;
+      color: @input-text-color;
+      border-radius: @component-border-radius;
+      background-color: @config-panels-atom-text-editor-background-color;
+      opacity: 1;
+
+      &.is-focused {
+        background-color: @config-panels-atom-text-editor-background-color;
+        opacity: 1;
+      }
+
+      .placeholder-text {
+        color: @text-color-subtle;
+      }
+      .selection .region {
+        background-color: @background-color-selected;
+      }
+    }
+  }
+
+  select.form-control {
+    color: @config-panels-selectbox-text-color;
+    background-color: @config-panels-selectbox-background-color;
+  }
+
+  .sub-section .sub-section-heading {
+    background-color: @config-panels-background-color;
+    color: @config-panels-section-heading-text-color;
+  }
+}
+
+.settings-view section .section-heading, .settings-view .section .section-heading {
+  color: @config-panels-section-heading-text-color;
 }
