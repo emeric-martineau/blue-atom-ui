@@ -61,3 +61,26 @@
 .btn-group > .btn {
   border-color: hsla(0,0%,0%,.2);
 }
+
+// Button in toolbar
+.nuclide-ui-toolbar .btn {
+  color: @button-text-color;
+  background-color: @button-background-color;
+  &:hover,
+  &:focus {
+    color: @button-text-color-hover;
+    background-color: @button-background-color-hover;
+  }
+  &:active {
+    color: @button-text-color-active;
+    background-color: darken(@button-background-color, 20%);
+  }
+  &.selected {
+    color: @theme-color-white;
+    background-color: @theme-color-blue;;
+  }
+  &:focus,
+  &:focus:active {
+    outline: none;
+  }
+}
